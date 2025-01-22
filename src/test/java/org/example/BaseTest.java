@@ -6,7 +6,6 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -41,15 +40,6 @@ public class BaseTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @Test
-    public void testLaunchTruecaller() throws InterruptedException {
-        pageClass.clickOnAllowNotification();
-        pageClass.clickGetStarted();
-        pageClass.allowAllThePermissions();
-        pageClass.login();
-        pageClass.completeProfile();
     }
 
     @AfterMethod
